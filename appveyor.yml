@@ -1,0 +1,23 @@
+version: 2.24.{build}
+
+branches:
+  only:
+    - build/vs2019
+
+configuration: Release
+
+platform:
+  - win32
+  - win64
+
+build:
+  project: nssm.sln
+  verbosity: minimal
+
+artifacts:
+  - path: 'out\Release\**'
+
+notifications:
+  - provider: Slack
+    incoming_webhook:
+      secure: 6xD2ujsiPvtwxG7+lDge0d8+J7sJQjXcNZbUe2aiz7jOl1mSPDUPsISWu7mOYV9KB81PFyawE+csJ0H8j6sixUbc3j9CLK9bU9++I9J5S0E=
