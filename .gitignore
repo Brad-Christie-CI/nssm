@@ -1,4 +1,11 @@
 .vs/
 Backup/
+out/
+tmp/
 
+messages.rc
+messages.h
 UpgradeLog.htm
+version.h
+*.bin
+*.vcxproj.user
